@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harmonic Keyboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Harmonic Keyboard</h1>
+        <div class="controls">
+            <label for="sound-source">Sound Source:</label>
+            <select id="sound-source">
+                <option value="sine">Sine Wave</option>
+                <option value="piano">Piano</option>
+            </select>
+        </div>
+        <canvas id="harmonic-canvas" width="500" height="500"></canvas> <!-- Added canvas -->
+        <p>Use your PC keyboard to play notes. Arrow keys change PC key harmonic offset.</p> <!-- Updated help text -->
+    </div>
+    <script src="piano.js"></script>
+    <script src="main.js"></script>
+
+    <footer>
+        <hr>
+        <p>Harmonic Canvas</p>
+        <p>Product by <a href="https://twitter.com/koteitan" target="_blank" rel="noopener noreferrer">koteitan</a></p>
+        <p>Programmed by Cline + Gemini 1.5 Pro</p>
+        <p><a href="https://github.com/koteitan/harmkey" target="_blank" rel="noopener noreferrer">Source code on GitHub</a></p>
+    </footer>
+</body>
+</html>

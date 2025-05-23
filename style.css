@@ -1,0 +1,57 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column; /* Ensure items stack vertically */
+    justify-content: center; /* This will center the block of container+footer */
+    align-items: center; /* Center items horizontally */
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.controls {
+    margin-bottom: 20px;
+}
+
+.controls label {
+    margin-right: 10px;
+}
+
+#harmonic-canvas {
+    border: 1px solid #ccc;
+    cursor: pointer;
+    margin-bottom: 20px;
+    /* Ensure canvas is not larger than its container or viewport */
+    max-width: 100%;
+    height: auto; /* Maintain aspect ratio if width is constrained */
+}
+
+/* Remove .key styles as they are no longer used */
+
+p {
+    font-size: 0.9em;
+    color: #666;
+}
+
+footer {
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #eee; /* Use hr in html or border-top in css */
+    font-size: 0.8em;
+    color: #777;
+    text-align: center;
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 1em; /* Relative to footer's font-size */
+}
