@@ -62,12 +62,12 @@ const Piano = {
         const gainNode = this.audioContext.createGain();
         // Further increased volume
         const now = this.audioContext.currentTime;
-        gainNode.gain.setValueAtTime(1.0, now); // Increased initial volume to max (can go higher but might clip if sample is loud)
+        gainNode.gain.setValueAtTime(1.5, now); // Increased initial volume further
         // Hold at a sustain level, then decay.
         // This is a simplified ADSR-like envelope.
         // Attack (implicit, very fast with setValueAtTime)
         // Decay to sustain level
-        gainNode.gain.linearRampToValueAtTime(0.9, now + 0.1); // Increased sustain level
+        gainNode.gain.linearRampToValueAtTime(1.3, now + 0.1); // Increased sustain level further
         // Sustain (this level is held until stop is called or note naturally ends)
         // Release (handled by Piano.stop or natural end of sample + ramp)
         // Set a long ramp to simulate sustain, which will be cut short by Piano.stop

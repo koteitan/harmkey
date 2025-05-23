@@ -1,4 +1,4 @@
-# Harmonic Canvas
+# Harmonic Keyboard v1.0
 
 A simple web-based application to explore and play harmonics of a base frequency (440Hz - A4) using different sound sources.
 
@@ -14,19 +14,19 @@ A simple web-based application to explore and play harmonics of a base frequency
     -   Play specific harmonics using your computer keyboard:
         -   `a, s, d, f, g, h, j, k, l, ;` map to base harmonics 1-10.
         -   `z, x, c, v, b, n, m, ,, .` map to base harmonics 11-19.
-    -   **Harmonic Offset**: Use the **ArrowUp** and **ArrowDown** keys to add/subtract an offset of 10 to the base harmonic played by PC keys. The current offset is displayed on the page.
-        -   The offset allows playing harmonics up to the 49th via the PC keyboard.
+    -   **Sound Shifting**: Use the **ArrowUp** and **ArrowDown** keys to shift the entire set of sounds produced by the PC keys through 7 different harmonic mappings (default, 3 up, 3 down). An indicator on the page shows the current shift state.
+    -   **Canvas Labels**: PC key characters are displayed on canvas cells if that cell's sound matches the current sound of a PC key.
 -   **Polyphony**: PC keyboard input supports playing multiple notes simultaneously. Canvas input is monophonic (dragging to a new cell stops the previous one).
 
 ## Files
 
 -   `index.html`: The main HTML structure, including the canvas and controls.
 -   `style.css`: Styles for the page layout and elements.
--   `main.js`: Core application logic, including:
+    -   `main.js`: Core application logic, including:
     -   AudioContext setup.
     -   Sine wave generation.
-    -   Canvas drawing and interaction (mouse/touch).
-    -   PC keyboard input handling and harmonic offset logic.
+    -   Canvas drawing and interaction (mouse/touch), including display of harmonic values and corresponding PC key labels.
+    -   PC keyboard input handling and sound shifting logic.
     -   Integration with `piano.js`.
 -   `piano.js`: Handles loading and playing the piano sample with pitch adjustment.
 
@@ -36,7 +36,8 @@ A simple web-based application to explore and play harmonics of a base frequency
 2.  Open `index.html` in a modern web browser.
 3.  An internet connection is required for the piano sound, as the sample is fetched from an external URL.
 4.  Use the dropdown to select between "Sine Wave" and "Piano" sound sources.
-5.  Interact with the canvas by clicking and dragging, or use the PC keyboard as described above.
+5.  Interact with the canvas by clicking/tapping and dragging.
+6.  If using a PC, you can also use the `qweruio`, `asdfjkl`, and `zxcvm,.` key rows to play notes. Use ArrowUp/Down keys to change the sound mapping for these PC keys. PC key labels will appear on the canvas cells.
 
 ## Credits
 

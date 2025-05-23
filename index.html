@@ -17,14 +17,16 @@
             </select>
         </div>
         <canvas id="harmonic-canvas" width="500" height="500"></canvas> <!-- Added canvas -->
-        <p>Use your PC keyboard to play notes. Arrow keys change PC key harmonic offset.</p> <!-- Updated help text -->
+        <!-- PC key specific help text removed as keys are now labeled on canvas -->
+        <!-- The "PC Key Sound Shift Offset" indicator will still be dynamically added by main.js -->
+        <div id="debug-info" style="position: fixed; bottom: 0; left: 0; background: rgba(255,255,255,0.8); padding: 5px; font-size: 10px; z-index: 100;">Touch Debug Info</div>
     </div>
     <script src="piano.js"></script>
     <script src="main.js"></script>
 
     <footer>
         <hr>
-        <p>Harmonic Canvas</p>
+        <p>Harmonic Keyboard v1.0</p>
         <p>Product by <a href="https://twitter.com/koteitan" target="_blank" rel="noopener noreferrer">koteitan</a></p>
         <p>Programmed by Cline + Gemini 1.5 Pro</p>
         <p><a href="https://github.com/koteitan/harmkey" target="_blank" rel="noopener noreferrer">Source code on GitHub</a></p>
